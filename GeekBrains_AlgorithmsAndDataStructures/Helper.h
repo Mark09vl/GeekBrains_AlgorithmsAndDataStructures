@@ -11,8 +11,10 @@ double GetDouble(char *text, int checkMinValue, double minValue) {
 
     while (1) {
         printf("%s", text);
-        validation = scanf("%lf", &_result);
-        
+
+        // #Вопрос: Если ввести букуву, то уходит в вечный цикл. 
+        // getchar из курса частично решает проблему: в цикл не уходит, но перестаёт принимать значения
+        validation = scanf("%lf", &_result);        
         if (validation ||
             (checkMinValue && _result < minValue 
             || !checkMinValue)) {
