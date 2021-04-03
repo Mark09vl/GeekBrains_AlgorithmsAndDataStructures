@@ -67,3 +67,4 @@ char* GetChar(char* text, int checkMinRange, int minRange, int checkMaxRange, in
 
     return _result;
 }
+

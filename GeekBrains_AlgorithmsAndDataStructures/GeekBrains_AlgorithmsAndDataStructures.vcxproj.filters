@@ -15,7 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Menu.c">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
     <ClCompile Include="HomeWorkNumber1.c">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="HomeWorkNumber2.c">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>

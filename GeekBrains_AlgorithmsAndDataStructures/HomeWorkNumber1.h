@@ -1,11 +1,14 @@
 //Коротких Марк Александрович
 
+#include <stdio.h>
+//#include "Helper.h"
+#include <string.h>
 #include <time.h>
 
 /// <summary>1. Ввести вес и рост человека. Рассчитать и вывести индекс массы тела по формуле I=m/(h*h); где
 /// m - масса тела в килограммах, h - рост в метрах.</summary>
 /// <returns></returns>
-void Solution_1_1() {
+void Solution1() {
 
     double _weight, _height;
     
@@ -19,7 +22,7 @@ void Solution_1_1() {
 
 /// <summary>2. Найти максимальное из четырех чисел. Массивы не использовать.</summary>
 /// <returns></returns>
-void Solution_1_2() {
+void Solution2() {
 
     int _value1, _value2, _value3, _value4, _result = 0;
 
@@ -52,7 +55,7 @@ void Solution_1_2() {
 
 /// <summary>3. Написать программу обмена значениями двух целочисленных переменных.</summary>
 /// <returns></returns>
-void Solution_1_3() {
+void Solution3() {
 
     int _value1, _value2;
 
@@ -73,13 +76,13 @@ void Solution_1_3() {
 
 /// <summary>4. Написать программу нахождения корней заданного квадратного уравнения.</summary>
 /// <returns></returns>
-void Solution_1_4() {
+void Solution4() {
 
 }
 
 /// <summary>5. С клавиатуры вводится номер месяца. Требуется определить, к какому времени года он относится.</summary>
 /// <returns></returns>
-void Solution_1_5() {
+void Solution5() {
 
     int _value;
 
@@ -103,7 +106,7 @@ void Solution_1_5() {
 
 /// <summary>6. Ввести возраст человека (от 1 до 150 лет) и вывести его вместе с последующим словом «год», «года» или «лет».</summary>
 /// <returns></returns>
-void Solution_1_6() {
+void Solution6() {
     int _value, _penultValue, _lastValue;
 
     _value = GetInt("Enter age: ", 1, 1, 1, 150);
@@ -129,13 +132,13 @@ void Solution_1_6() {
 
 /// <summary>7. С клавиатуры вводятся числовые координаты двух полей шахматной доски (x1,y1,x2,y2). Требуется определить, относятся поля к одному цвету или нет.</summary>
 /// <returns></returns>
-void Solution_1_7() {
+void Solution7() {
 
 }
 
 /// <summary>8. Ввести a и b и вывести квадраты и кубы чисел от a до b.</summary>
 /// <returns></returns>
-void Solution_1_8() {
+void Solution8() {
 
     int _lastValue, _firstValue, _tempValue, _resultValue;
 
@@ -170,19 +173,19 @@ void Solution_1_8() {
 
 /// <summary>9. Даны целые положительные числа N и K. Используя только операции сложения и вычитания, найти частное от деления нацело N на K, а также остаток от этого деления.</summary>
 /// <returns></returns>
-void Solution_1_9() {
+void Solution9() {
 
 }
 
 /// <summary>10. Дано целое число N (> 0). С помощью операций деления нацело и взятия остатка от деления определить, имеются ли в записи числа N нечетные цифры. Если имеются, то вывести True, если нет — вывести False.</summary>
 /// <returns></returns>
-void Solution_1_10() {
+void Solution10() {
 
 }
 
 /// <summary>11. С клавиатуры вводятся числа, пока не будет введен 0. Подсчитать среднее арифметическое всех положительных четных чисел, оканчивающихся на 8.</summary>
 /// <returns></returns>
-void Solution_1_11() {
+void Solution11() {
 
     double ENDVALUE = 0, _allValue = 0, _tempValue, i = 0;
 
@@ -213,6 +216,20 @@ void Solution_1_11() {
 
 }
 
+/// <summary>12. Написать функцию нахождения максимального из трех чисел.</summary>
+/// <returns></returns>
+void Solution12() {
+
+    int _value1, _value2, _value3;
+
+    _value1 = GetInt("Enter value 1: ", 0, 0, 0, 0);
+    _value2 = GetInt("Enter value 2: ", 0, 0, 0, 0);
+    _value3 = GetInt("Enter value 3: ", 0, 0, 0, 0);
+
+    printf("%d", SearchMaxValue(_value1, _value2, _value3));
+
+}
+
 /// <summary>Функция нахождения максимального из трех чисел.</summary>
 /// <returns></returns>
 int SearchMaxValue(int value1, int value2, int value3) {
@@ -233,25 +250,11 @@ int SearchMaxValue(int value1, int value2, int value3) {
 
 }
 
-/// <summary>12. Написать функцию нахождения максимального из трех чисел.</summary>
-/// <returns></returns>
-void Solution_1_12() {
-
-    int _value1, _value2, _value3;
-
-    _value1 = GetInt("Enter value 1: ", 0, 0, 0, 0);
-    _value2 = GetInt("Enter value 2: ", 0, 0, 0, 0);
-    _value3 = GetInt("Enter value 3: ", 0, 0, 0, 0);
-
-    printf("%d", SearchMaxValue(_value1, _value2, _value3));
-
-}
-
 /// <summary>13. * Написать функцию, генерирующую случайное число от 1 до 100.
 /// а) с использованием стандартной функции rand();
 /// б) без использования стандартной функции rand(). </summary>
 /// <returns></returns>
-void Solution_1_13() {
+void Solution13() {
     
     int _time = (int)time(NULL);
 
@@ -263,7 +266,7 @@ void Solution_1_13() {
 
 /// <summary>14. *Автоморфные числа. Натуральное число называется автоморфным, если оно равно последним цифрам своего квадрата. Например, 252 = 625. Напишите программу, которая вводит натуральное число N и выводит на экран все автоморфные числа, не превосходящие N.</summary>
 /// <returns></returns>
-void Solution_1_14() {
+void Solution14() {
 
 }
 
@@ -278,52 +281,58 @@ int StartHomeWorkNumber1()
     switch (_numberTask)
     {
     case 1:
-        Solution_1_1();
+        Solution1();
         break;
     case 2:
-        Solution_1_2();
+        Solution2();
         break;
     case 3:
-        Solution_1_3();
+        Solution3();
         break;
     /*case 4:
-        Solution_1_4();
+        Solution4();
         break;*/
     case 5:
-        Solution_1_5();
+        Solution5();
         break;
     case 6:
-        Solution_1_6();
+        Solution6();
         break;
     /*case 7:
-        Solution_1_8();
+        Solution8();
         break;*/
     case 8:
-        Solution_1_8();
+        Solution8();
         break;
     /*case 9:
-        Solution_1_9();
+        Solution9();
         break;*/
     /*case 10:
-        Solution_1_10();
+        Solution10();
         break;*/
     case 11:
-        Solution_1_11();
+        Solution11();
         break;
     case 12:
-        Solution_1_12();
+        Solution12();
         break;
     case 13:
-        Solution_1_13();
+        Solution13();
         break;
     /*case 14:
-        Solution_1_14();
+        Solution14();
         break;*/
     default:
         printf("This task has not yet been completed :(");
         break;
     }
 
+    
+    
+
+    printf("\n");
+    system("pause");
+    
     return 1;
 }
 
