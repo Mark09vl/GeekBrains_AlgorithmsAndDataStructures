@@ -15,9 +15,8 @@ double GetDouble(char *text, int checkMinValue, double minValue) {
         // #Вопрос: Если ввести букуву, то уходит в вечный цикл. 
         // getchar из курса частично решает проблему: в цикл не уходит, но перестаёт принимать значения
         validation = scanf("%lf", &_result);        
-        if (validation ||
-            (checkMinValue && _result < minValue 
-            || !checkMinValue)) {
+        if (!validation ||
+            (checkMinValue && _result < minValue)) {
             printf("Incorrect value!\n\n");
         }
         else {
@@ -35,10 +34,8 @@ int GetInt(char* text, int checkMinValue, int minValue, int checkMaxValue, int m
         printf("%s", text);
         validation = scanf("%d", &_result);
         if (!validation ||
-            (checkMinValue && _result < minValue
-                || !checkMinValue)
-            || (checkMaxValue && _result > maxValue
-                || !checkMaxValue)) {
+            (checkMinValue && _result < minValue)
+            || (checkMaxValue && _result > maxValue)) {
             printf("Incorrect value!\n\n");
         }
         else {
@@ -58,11 +55,9 @@ char* GetChar(char* text, int checkMinRange, int minRange, int checkMaxRange, in
         printf("%s", text);
         validation = scanf("%s", &_result);
         int length = strlen(&_result);
-        if (validation ||
-            (checkMinRange && length < minRange 
-                || !checkMinRange)
-            || (checkMaxRange && length > maxRange 
-                || !checkMaxRange)) {
+        if (!validation ||
+            (checkMinRange && length < minRange)
+            || (checkMaxRange && length > maxRange)) {
             printf("Incorrect value!\n\n");
         }
         else {
