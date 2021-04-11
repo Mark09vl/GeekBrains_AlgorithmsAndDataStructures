@@ -12,8 +12,6 @@ double GetDouble(char *text, int checkMinValue, double minValue) {
     while (1) {
         printf("%s", text);
 
-        // #Вопрос: Если ввести букуву, то уходит в вечный цикл. 
-        // getchar из курса частично решает проблему: в цикл не уходит, но перестаёт принимать значения
         validation = scanf("%lf", &_result);        
         if (!validation ||
             (checkMinValue && _result < minValue)) {
@@ -66,4 +64,11 @@ char* GetChar(char* text, int checkMinRange, int minRange, int checkMaxRange, in
     }
 
     return _result;
+}
+
+void CopyIntArray(int* array, int* newArray, int arrLength) {
+    for (size_t i = 0; i < arrLength; i++)
+    {
+        newArray[i] = array[i];
+    }
 }
