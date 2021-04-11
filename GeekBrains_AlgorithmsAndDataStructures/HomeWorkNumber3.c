@@ -1,4 +1,5 @@
 //Коротких Марк Александрович
+
 #include <time.h>
 #define ARRLENGTH 15
 
@@ -190,9 +191,6 @@ void Solution_3_3(int* array, int arrLength) {
 void Solution_3_4() {
 
 }
-
-
-
 
 
 int StartHomeWorkNumber3()

@@ -12,7 +12,7 @@ int main(void)
 	
 	int _numberHomeWork;
 
-	_numberHomeWork = GetInt("Enter the homework number(1-3): ", 1, 1, 1, 3);
+	_numberHomeWork = GetInt("Enter the homework number(1-4): ", 1, 1, 1, 4);
 
 	
 	switch (_numberHomeWork)
@@ -25,6 +25,9 @@ int main(void)
 		break;
 	case 3:
 		StartHomeWorkNumber3();
+		break;
+	case 4:
+		StartHomeWorkNumber4();
 		break;
 	default:
 		printf("This task has not yet been completed :(");
