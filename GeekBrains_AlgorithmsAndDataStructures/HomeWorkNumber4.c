@@ -3,6 +3,8 @@
 #define N 3
 #define M 3
 
+#define ChessN 8
+#define ChessM 2
 
 /// <summary>1. *Количество маршрутов с препятствиями. Реализовать чтение массива с препятствием и нахождение количество маршрутов.</summary>
 /// <returns></returns>
@@ -156,11 +158,15 @@ void Solution_4_2() {
 
 }
 
+
+
 /// <summary>3. ***Требуется обойти конем шахматную доску размером NxM, пройдя через все поля доски по одному разу. Здесь алгоритм решения такой же, как в задаче о 8 ферзях. Разница только в проверке положения коня.</summary>
 /// <returns></returns>
 void Solution_4_3() {
 
     
+    
+
 }
 
 int StartHomeWorkNumber4()
@@ -179,9 +185,9 @@ int StartHomeWorkNumber4()
     case 2:
         Solution_4_2();
         break;
-    /*case 3:
+    case 3:
         Solution_4_3();
-        break;*/
+        break;
     default:
         printf("This task has not yet been completed :(");
         break;

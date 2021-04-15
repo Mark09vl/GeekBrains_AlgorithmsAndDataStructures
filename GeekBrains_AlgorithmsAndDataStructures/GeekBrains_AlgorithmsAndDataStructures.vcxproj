@@ -145,6 +145,7 @@
     <ClCompile Include="HomeWorkNumber2.c" />
     <ClCompile Include="HomeWorkNumber3.c" />
     <ClCompile Include="HomeWorkNumber4.c" />
+    <ClCompile Include="HomeWorkNumber5.c" />
     <ClCompile Include="Menu.c" />
   </ItemGroup>
   <ItemGroup>

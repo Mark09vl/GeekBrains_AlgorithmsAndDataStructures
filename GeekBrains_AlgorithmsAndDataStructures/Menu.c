@@ -29,6 +29,9 @@ int main(void)
 	case 4:
 		StartHomeWorkNumber4();
 		break;
+	case 5:
+		StartHomeWorkNumber5();
+		break;
 	default:
 		printf("This task has not yet been completed :(");
 		break;
