@@ -225,7 +225,19 @@ void Solution_4_3() {
     }
 
     if (HorseAlgorithm(5, 0, 1, _board, x, y)) {
-        printmatrix(x, y, _board);
+        
+        for (int i = 0; i < x; ++i) {
+            
+            for (int j = 0; j < y; ++j) {
+                
+                printf("%6d", _board[i][j]);
+
+            }
+
+            printf("\n");
+
+        }
+
     }
     else {
         printf("No solution.\n");

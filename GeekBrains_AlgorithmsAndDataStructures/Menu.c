@@ -5,14 +5,14 @@
 #include <string.h>
 
 
-int main(void)
+int main(int argc, char** argv)
 {
 	char* locale = setlocale(LC_ALL, "RU");
 	setlocale(LC_NUMERIC, "C");
 	
 	int _numberHomeWork;
 
-	_numberHomeWork = GetInt("Enter the homework number(1-5): ", 1, 1, 1, 5);
+	_numberHomeWork = GetInt("Enter the homework number(1-8): ", 1, 1, 1, 8);
 
 	
 	switch (_numberHomeWork)
@@ -31,6 +31,9 @@ int main(void)
 		break;
 	case 5:
 		StartHomeWorkNumber5();
+		break;
+	case 6:
+		StartHomeWorkNumber6(argc, argv);
 		break;
 	default:
 		printf("This task has not yet been completed :(");
