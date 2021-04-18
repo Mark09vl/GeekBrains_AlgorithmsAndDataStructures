@@ -12,7 +12,7 @@ int main(void)
 	
 	int _numberHomeWork;
 
-	_numberHomeWork = GetInt("Enter the homework number(1-4): ", 1, 1, 1, 4);
+	_numberHomeWork = GetInt("Enter the homework number(1-5): ", 1, 1, 1, 5);
 
 	
 	switch (_numberHomeWork)
