@@ -4,7 +4,7 @@
 #define M 3
 
 #define ChessN 8
-#define ChessM 3
+#define ChessM 2
 
 /// <summary>1. *Количество маршрутов с препятствиями. Реализовать чтение массива с препятствием и нахождение количество маршрутов.</summary>
 /// <returns></returns>
@@ -158,78 +158,14 @@ void Solution_4_2() {
 
 }
 
-int CheckCorrectMove(int x, int y, int** board, int a, int b)
-{
-    return
-        x >= 0 && x < a&&
-        y >= 0 && y < b&&
-        board[y][x] == 0;
-}
 
-int compar(const void* a, const void* b)
-{
-    return ((int*)a)[0] - ((int*)b)[0];
-}
-
-int HorseAlgorithm(int x, int y, int n, int** board, int a, int b) {
-
-    int _moves[ChessN][ChessM] = {
-        { -2,  1 },{ -1,  2 },{ 1,  2 },{ 2,  1 },
-        { 2, -1 },{ 1, -2 },{ -1, -2 },{ -2, -1 }
-    };
-
-    board[y][x] = n;
-    if (n == a * b)
-        return 1;
-
-    int i, j, _valids[ChessN][ChessM];
-    for (i = 0; i < ChessN; i++) {
-        _valids[i][0] = 0;
-        _valids[i][1] = x + _moves[i][0];
-        _valids[i][2] = y + _moves[i][1];
-        if (CheckCorrectMove(_valids[i][1], _valids[i][2], board, a, b)) {
-            for (j = 0; j < ChessN; j++) {
-                if (CheckCorrectMove(_valids[i][1] + _moves[j][0],
-                    _valids[i][2] + _moves[j][1], board, a, b))
-                    _valids[i][0]++;
-            }
-        }
-    }
-
-    qsort(&_valids[0][0], ChessN, ChessM * sizeof(int), &compar);
-    for (i = 0; i < ChessN; i++) {
-        if (CheckCorrectMove(_valids[i][1], _valids[i][2], board, a, b) &&
-            HorseAlgorithm(_valids[i][1], _valids[i][2], n + 1, board, a, b))
-            return 1;
-    }
-
-    board[y][x] = 0;
-    return 0;
-
-}
 
 /// <summary>3. ***Требуется обойти конем шахматную доску размером NxM, пройдя через все поля доски по одному разу. Здесь алгоритм решения такой же, как в задаче о 8 ферзях. Разница только в проверке положения коня.</summary>
 /// <returns></returns>
 void Solution_4_3() {
 
-    int x = 8,
-        y = 8;
-
-    int** _board = (int**)malloc(x * sizeof(int*));
-    for (int i = 0; i < y; i++) {
-        _board[i] = (int*)malloc(y * sizeof(int));
-        memset(_board[i], 0, sizeof(int));
-        for (int j = 0; j < x; j++) {
-            _board[i][j] = 0;
-        }
-    }
-
-    if (HorseAlgorithm(5, 0, 1, _board, x, y)) {
-        printmatrix(x, y, _board);
-    }
-    else {
-        printf("No solution.\n");
-    }
+    
+    
 
 }
 
