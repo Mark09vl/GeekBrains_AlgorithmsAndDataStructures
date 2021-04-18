@@ -1,7 +1,7 @@
 //Коротких Марк Александрович
 
-#include "StackWork5.h"
-#include "QueueWork5.h"
+#include "stack.h"
+#include "queue.h"
 
 /// <summary>1. Реализовать перевод из десятичной в двоичную систему счисления с использованием стека.</summary>
 /// <returns></returns>
@@ -179,12 +179,12 @@ void PostfixNotation(char* a, char* out)
                 ++j;
             }
             if (is_op(a[i])) {
-                if (StackEmpty(&_st01) || prior(StackTop(&_st01)) < prior(a[i])) {
+                if (stkEmpty(&_st01) || prior(stkTop(&_st01)) < prior(a[i])) {
                     Enqueue(a[i], &_st01);
                 }
                 else {
-                    while (!StackEmpty(&_st01) && (prior(StackTop(&_st01)) >= prior(a[i]))) {
-                        out[j++] = StackTop(&_st01);
+                    while (!stkEmpty(&_st01) && (prior(stkTop(&_st01)) >= prior(a[i]))) {
+                        out[j++] = stkTop(&_st01);
                         Dequeue(&_st01);
                     }
                     Enqueue(a[i], &_st01);
@@ -196,13 +196,13 @@ void PostfixNotation(char* a, char* out)
                 }
                 else {
                     if (a[i] == ')') {
-                        if (StackEmpty(&_st01) || StackTop(&_st01) == '(') {
+                        if (stkEmpty(&_st01) || stkTop(&_st01) == '(') {
                             printf("Error!\n");
                             exit(-1);
                         }
                         else {
-                            while (StackTop(&_st01) != '(') {
-                                out[j] = StackTop(&_st01);
+                            while (stkTop(&_st01) != '(') {
+                                out[j] = stkTop(&_st01);
                                 Dequeue(&_st01);
                                 j++;
                             }
@@ -213,14 +213,14 @@ void PostfixNotation(char* a, char* out)
             }
         }
     }
-    while (!StackEmpty(&_st01)) {
-        if (StackTop(&_st01) == '(')
+    while (!stkEmpty(&_st01)) {
+        if (stkTop(&_st01) == '(')
         {
             printf("Error!\n");
             exit(-1);
         }
         else {
-            out[j] = StackTop(&_st01);
+            out[j] = stkTop(&_st01);
             Dequeue(&_st01);
             j++;
         }

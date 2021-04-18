@@ -30,7 +30,7 @@ struct Stack {
 typedef struct Stack TStack;
 
 
-int StackEmpty(TStack* stack) {
+int stkEmpty(TStack* stack) {
 
 	if (stack->size > 0) {
 
@@ -42,7 +42,7 @@ int StackEmpty(TStack* stack) {
 
 }
 
-TCH StackTop(TStack* stack) {
+TCH stkTop(TStack* stack) {
 
 	TCH _ret;
 
@@ -57,7 +57,6 @@ TCH StackTop(TStack* stack) {
 	_ret = stack->head->value;
 
 	return _ret;
-
 }
 
 void Enqueue(TCH value, TStack* current) {
@@ -92,14 +91,11 @@ TCH Dequeue(TStack* cur) {
 	TCH _value;
 
 	if (cur->size == 0) {
-
 		printf("Error! Stack is empty.\n");
 		return (char)NULL;
-
 	}
 
 	Node* _next = cur->head;
-
 	_value = cur->head->value;
 	cur->head = cur->head->next;
 	free(_next);
@@ -109,6 +105,7 @@ TCH Dequeue(TStack* cur) {
 
 }
 
+// copy stack, return number's stored elements
 int copyStack(TStack* src, TStack* dst) {
 
 	int i = 0;
@@ -118,15 +115,14 @@ int copyStack(TStack* src, TStack* dst) {
 	_tail.head = NULL;
 	dst->maxsize = src->maxsize;
 	_tail.maxsize = src->maxsize;
+	Node* current = src->head;
 
-	Node* _current = src->head;
-
-	while (_current != NULL) {
+	while (current != NULL) {
 
 		if (dst->head == NULL) {
 
 			dst->head = (Node*)malloc(sizeof(Node));
-			dst->head->value = _current->value;
+			dst->head->value = current->value;
 			_tail.head = dst->head;
 
 		}
@@ -134,12 +130,12 @@ int copyStack(TStack* src, TStack* dst) {
 
 			_tail.head->next = (Node*)malloc(sizeof(Node));
 			_tail.head = _tail.head->next;
-			_tail.head->value = _current->value;
+			_tail.head->value = current->value;
 			_tail.head->next = NULL;
 
 		}
 
-		_current = _current->next;
+		current = current->next;
 		i++;
 
 	}
