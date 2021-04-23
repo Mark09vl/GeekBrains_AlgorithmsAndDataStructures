@@ -143,12 +143,23 @@
   <ItemGroup>
     <ClCompile Include="HomeWorkNumber1.c" />
     <ClCompile Include="HomeWorkNumber2.c" />
+    <ClCompile Include="HomeWorkNumber3.c" />
+    <ClCompile Include="HomeWorkNumber4.c" />
+    <ClCompile Include="HomeWorkNumber5.c" />
+    <ClCompile Include="HomeWorkNumber6.c" />
     <ClCompile Include="Menu.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bitree.h" />
+    <ClInclude Include="DbTree.h" />
     <ClInclude Include="Helper.h">
       <FileType>CCode</FileType>
     </ClInclude>
+    <ClInclude Include="Nodedef.h" />
+    <ClInclude Include="QueueWork5.h" />
+    <ClInclude Include="QueueWork6.h" />
+    <ClInclude Include="StackWork5.h" />
+    <ClInclude Include="StackWork6.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
