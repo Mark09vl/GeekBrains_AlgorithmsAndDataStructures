@@ -154,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="Bitree.h" />
     <ClInclude Include="DbTree.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="Helper.h">
       <FileType>CCode</FileType>
     </ClInclude>

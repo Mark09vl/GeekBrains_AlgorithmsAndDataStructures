@@ -65,3 +65,33 @@ char* GetChar(char* text, int checkMinRange, int minRange, int checkMaxRange, in
 
     return _result;
 }
+
+void RandomizeArray(int* arr, int length)
+{
+
+    for (int i = 0; i < length; i++) {
+
+        arr[i] = rand() % length;
+
+    }
+
+}
+
+void SwapValue(int* a, int* b)
+{
+    int _c = *a;
+    *a = *b;
+    *b = _c;
+}
+
+void PrintArray(int* arr, int len)
+{
+    printf("[");
+    for (int i = 0; i < len; i++) {
+        printf("%2i", arr[i]);
+        if (i + 1 < len) {
+            printf(", ");
+        }
+    }
+    printf("]\n");
+}

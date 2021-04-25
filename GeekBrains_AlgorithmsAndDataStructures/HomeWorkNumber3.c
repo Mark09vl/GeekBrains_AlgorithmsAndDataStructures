@@ -5,13 +5,6 @@
 
 
 
-void SwapValue(int* a, int* b)
-{
-    int _c = *a;
-    *a = *b;
-    *b = _c;
-}
-
 int BubbleSort(int* array, int arrLength)
 {
     int _index = 0,
