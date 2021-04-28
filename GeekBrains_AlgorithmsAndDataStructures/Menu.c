@@ -35,6 +35,12 @@ int main(int argc, char** argv)
 	case 6:
 		StartHomeWorkNumber6(argc, argv);
 		break;
+	case 7:
+		StartHomeWorkNumber7();
+		break;
+	case 8:
+		StartHomeWorkNumber8();
+		break;
 	default:
 		printf("This task has not yet been completed :(");
 		break;

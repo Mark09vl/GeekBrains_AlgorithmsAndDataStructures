@@ -147,11 +147,14 @@
     <ClCompile Include="HomeWorkNumber4.c" />
     <ClCompile Include="HomeWorkNumber5.c" />
     <ClCompile Include="HomeWorkNumber6.c" />
+    <ClCompile Include="HomeWorkNumber7.c" />
+    <ClCompile Include="HomeWorkNumber8.c" />
     <ClCompile Include="Menu.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bitree.h" />
     <ClInclude Include="DbTree.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="Helper.h">
       <FileType>CCode</FileType>
     </ClInclude>
